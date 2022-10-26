@@ -1,6 +1,6 @@
 # How To Build A Model In R
 GLEON All Hands' Meeting 2022<br />
-<a href="url"><img src="gleon.JPG" align="right" height="220" width="220" ></a>
+<a href="url"><img src="gleon.JPG" align="right" height="220" width="320" ></a>
 -----
 
 :busts_in_silhouette: Robert Ladwig, Hilary Dugan and Paul Hanson<br />
