@@ -144,7 +144,7 @@ for(i in 2:nSteps){
   phyto[i] = phyto[i-1] + npp[i] - Rphyto[i] - Settling
 }
 
-# Setup variables to track fluxes
+# Make dataframe of output vectors 
 out.model = doObs |> slice(1:nSteps) |> 
   mutate(doPredic = doPredic,
          phyto = phyto,
