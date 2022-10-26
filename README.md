@@ -1,4 +1,7 @@
 # How To Build A Model In R
+<span style="color:blue">**Disclaimer: This is not the final material, please check again later.**</span>.
+<br />
+
 GLEON All Hands' Meeting 2022<br />
 <a href="url"><img src="gleon.JPG" align="right" height="220" width="320" ></a>
 -----
@@ -6,13 +9,12 @@ GLEON All Hands' Meeting 2022<br />
 :busts_in_silhouette: Robert Ladwig, Hilary Dugan and Paul Hanson<br />
 :clock1: Oct 30th, 13:30-16:30 Boyd Center Conference Room <br />
 :speech_balloon:2.5 - 3 hours <br />
-:computer: Please install the packages **tidyverse** and **reshape2** before the workshop
+:computer: Please install the packages **tidyverse**, **patchwork** and **reshape2** before the workshop
 -----
 
 <br />
 
 
-*Disclaimer: This is not the final material, please check again later.
 
 Want to be a modeler but don't know where to start? Do you find the word "model" scary? Wish you knew more about how to get started building models in R? If yes to any of the above, this workshop is for you. If you already have some R basics under your belt, we aim to add modeling to your R skillset. Learn what models are and how models are built, calibrated, and used for simplifying data and prediction.
 
@@ -22,6 +24,7 @@ You can clone or download files from this [Github repository](https://github.com
   ```
   install.packages("tidyverse")
   install.packages("reshape2")
+  install.packages("patchwork")
   ```
 
 ## Part 1: Ordinary least squares (OLS) - estimating parameters in a linear regression model (timeless)
