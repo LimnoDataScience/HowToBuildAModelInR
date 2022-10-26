@@ -6,7 +6,7 @@ GLEON All Hands' Meeting 2022<br />
 :busts_in_silhouette: Robert Ladwig, Hilary Dugan and Paul Hanson<br />
 :clock1: Oct 30th, 13:30-16:30 Boyd Center Conference Room <br />
 :speech_balloon:2.5 - 3 hours <br />
-:computer: Please install the packages **tidyverse** and **reshape** before the workshop
+:computer: Please install the packages **tidyverse** and **reshape2** before the workshop
 -----
 
 <br />
@@ -21,7 +21,7 @@ You can clone or download files from this [Github repository](https://github.com
   You’ll need R (version >= 3.5), a GUI of your choice (e.g., Rstudio) and these packages:
   ```
   install.packages("tidyverse")
-  install.packages("pracma2")
+  install.packages("reshape2")
   ```
 
 ## Part 1: Ordinary least squares (OLS) - estimating parameters in a linear regression model (timeless)
