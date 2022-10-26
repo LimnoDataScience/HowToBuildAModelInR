@@ -1,5 +1,5 @@
 # How To Build A Model In R
-<span style="color:blue">**Disclaimer: This is not the final material, please check again later.**</span>.
+:rotating_light: <span style="color:blue">**Disclaimer: This is _not the final material_, please check again later.**</span> :rotating_light:
 <br />
 
 GLEON All Hands' Meeting 2022<br />
