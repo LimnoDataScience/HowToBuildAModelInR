@@ -4,13 +4,13 @@
 ## Observational data from NTL LTER
 
 # O2 Model: dO2/dt = NPP - Rtot + Fatm
-# O2(t) = (O2(t-1) + NPP(t-1) - Rtot(t-1) + Fatm(t-1)) * dt
+# O2(t) = O2(t-1) + (NPP(t-1) - Rtot(t-1) + Fatm(t-1)) * dt
 
 # Phytoplankton Model: dPhyto/dt = NPP - RPhyto - Settling
-# Phyto(t) = (Phyto(t-1) + NPP(t-1) - RPhyto(t-1) - Settling(t-1)) * dt
+# Phyto(t) = Phyto(t-1) + (NPP(t-1) - RPhyto(t-1) - Settling(t-1)) * dt
 
 # NPP = f(PAR,phosphorus)
-# Rtot = (RDOC + RPhyto) * dt; RDOC = f(DOC); RPhyto = f(Phyto)
+# Rtot = RDOC + RPhyto; RDOC = f(DOC); RPhyto = f(Phyto)
 # Settling = f(zMix,Phyto)
 
 ##################################################
