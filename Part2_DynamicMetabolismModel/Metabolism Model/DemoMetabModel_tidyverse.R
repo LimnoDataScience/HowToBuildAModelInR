@@ -64,7 +64,7 @@ if (exists('doObs')){
 if (LoadData){
   doObs = read_tsv("Data/Mendota.doobs") 
   wtr = read_tsv("Data/Mendota.wtr")
-  PAR = read_tsv("Data/Mendota.par") |> mutate(PAR = as.numeric(PAR)) #dataset has non-numeric characters
+  PAR = read_tsv("Data/Mendota.par") %>% mutate(PAR = as.numeric(PAR)) #dataset has non-numeric characters
   
   ##Now lets plot the data quickly
   p1 = ggplot(doObs) + geom_line(aes(x = dateTime, y = DO)) + ylab('DO (mg/L)')
@@ -74,7 +74,7 @@ if (LoadData){
   print(p1 / p2 / p3 & theme_bw())
   
   # Let's join the data, so we have one dataframe
-  in.data = doObs |> left_join(PAR) |> left_join(wtr)
+  in.data = doObs %>% left_join(PAR) %>% left_join(wtr)
   
   # Plot DO as a function of T, just to show it
   p4 = ggplot(in.data, aes(x = temp0.5, y = DO)) + 
@@ -145,7 +145,7 @@ for(i in 2:nSteps){
 }
 
 # Make dataframe of output vectors 
-out.model = doObs |> slice(1:nSteps) |> 
+out.model = doObs %>% slice(1:nSteps) %>% 
   mutate(doPredic = doPredic,
          phyto = phyto,
          fatm = fatm, 
@@ -189,7 +189,7 @@ p6 = ggplot(out.model) +
   theme(axis.title.x = element_blank())
 
 # Plot the cumulative fluxes
-p7 = ggplot(out.model |> slice(-1)) +
+p7 = ggplot(out.model %>% slice(-1)) +
   geom_line(aes(x = dateTime, y = cumsum(npp), color = 'green4')) +
   geom_line(aes(x = dateTime, y = cumsum(-Rtot), color = 'red4')) +
   geom_line(aes(x = dateTime, y = cumsum(fatm), color = 'black')) +
