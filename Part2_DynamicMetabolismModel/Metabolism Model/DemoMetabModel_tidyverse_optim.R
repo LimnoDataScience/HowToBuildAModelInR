@@ -1,3 +1,5 @@
+library(hydroGOF) #for RMSE function
+
 metabFunction <- function(phytoR = 0.8, doObs, wTemp, PAR) {
   # (1) Setup constants and parameters
   # These three constants you might normally get from observational data
