@@ -1,6 +1,9 @@
 library(hydroGOF) #for RMSE function
 
-metabFunction <- function(phytoR = 0.8, doObs, wTemp, PAR) {
+metabFunction <- function(pars, doObs, wTemp, PAR) {
+  
+  phytoR = pars[1]
+  kDO = pars[2]
   # (1) Setup constants and parameters
   # These three constants you might normally get from observational data
   phosphorus = 0.050 # Constant value of phosphorus (ug/L)
@@ -9,7 +12,7 @@ metabFunction <- function(phytoR = 0.8, doObs, wTemp, PAR) {
   
   # Model parameters
   # Fatm = k * (DO deviation from saturation) / mixed layer
-  kDO = 1.0   # Parameter, gas exchange piston velocity (meters/day), often calculated from, e.g., wind speed
+  # kDO = 1.0   # Parameter, gas exchange piston velocity (meters/day), often calculated from, e.g., wind speed
   
   # NPP = PAR * P * pNPP * Theta^Temperature
   pNPP = 0.08  # Parameter, converts light and phosphorus to NPP (mgC/unitP/unitLight)
@@ -100,9 +103,9 @@ metabFunction <- function(phytoR = 0.8, doObs, wTemp, PAR) {
   return(out.rmse)
 }
 
-metabFunction(phytoR = 0.8, doObs = doObs, 
+metabFunction(pars = c(0.9,1), doObs = doObs, 
               wTemp = wTemp, PAR = PAR)
 
-optim(par = 0.8, fn = metabFunction, doObs = doObs, 
+optim(par = c(0.9,1), fn = metabFunction, doObs = doObs, 
       wTemp = wTemp, PAR = PAR, method = 'BFGS')$par
 
